@@ -93,11 +93,11 @@ main{
 }
 
 .left:hover{
-    background-image: url('/assets/leftHover.png');
+    background-image: url('./assets/leftHover.png');
 } 
 
 .right:hover{
-    background-image: url('/assets/rightHover.png');
+    background-image: url('./assets/rightHover.png');
 } 
 
 footer{
