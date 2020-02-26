@@ -44,9 +44,11 @@ h1::after{
 }
 
 li:hover{
-    color: rgb(240, 108, 100)
+    color: rgb(240, 108, 100);
 }
-
+li:nth-child(1){
+    color: rgb(240, 108, 100);
+}
 li{
     margin-right: 30px;
 }
