@@ -565,11 +565,15 @@ body {
 
 .getQuote .copy{
     margin-left: 2px;
-    margin-top: -2px;
+    color: rgb(90, 94, 119);
+    font-size: 0.74em;
+    //word-spacing: -0.02em;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .getQuote .social img{
-    margin-left: 5px;
+    margin-left: 4.6px;
 }
 
 .getQuote .social{
