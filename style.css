@@ -519,7 +519,7 @@ body {
     font-weight: 400;
     line-height: 1.97em;
     margin-top: 10px;
-    letter-spacing: 0.024em;
+    letter-spacing: 0.023em;
     text-align: justify;
 }
 .getQuote .contacts{
@@ -555,7 +555,7 @@ body {
 }
 
 .getQuote footer{
-    padding-top: 22px;
+    padding-top: 21px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -565,18 +565,15 @@ body {
 
 .getQuote .copy{
     margin-left: 2px;
-    margin-top: -1px;
-    color: rgb(102, 109, 137);
-    font-size: 0.75em;
-    letter-spacing: -0.01em;
+    margin-top: -2px;
 }
 
 .getQuote .social img{
-    margin-left: 4.5px;
+    margin-left: 5px;
 }
 
 .getQuote .social{
-    margin-top: 0;
+    margin-top: 1px;
 }
 
 .getQuote .social img:hover{
