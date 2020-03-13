@@ -8,40 +8,62 @@
     <title>Singolo</title>
 </head>
 <body>
-    <section class="singolo">
+    <div class="modal">
+        <div class="message">
+            <h2>Письмо отправлено</h2>
+            <p>Тема : <span class="subject"></span></p><br>
+            <p>Описание : <span class="description"></span></p><br>
+            <input type="button" class="ok" value="ОК">
+        </div>
+        
+    </div>
+    <section class="singolo" id="home">
         <header>
             <h1>SINGOLO</h1>
             <ul class="menu">
-                <li class='dt'>HOME</li>
-                <li class='dt'>SERVICES</li>
-                <li class='dt'>PORTFOLIO</li>
-                <li class='dt'>ABOUT</li>
-                <li>CONTACT</li>
+                <li class='dt'><a href="#home">HOME</a></li>
+                <li class='dt'><a href="#services">SERVICES</a></li>
+                <li class='dt'><a href="#portfol">PORTFOLIO</a></li>
+                <li class='dt'><a href="#about">ABOUT</a></li>
+                <li><a href="#cont">CONTACT</a></li>
             </ul>
         </header>
         
-        <main>
+        <main >
             <div class='left'>
                 <img src="./assets/left.png">
             </div>
+            
+            <div class="sliderContain">
+                <div class="slide1 ">
+                    <div class='vert'>
+                        <img src="./assets/vert.png">
+                        <div class="blackVert"></div>
+                    </div>
     
-            <div class='vert'>
-                <img src="./assets/vert.png">
+                    <div class='hor'>
+                        <img src="./assets/horiz.png">
+                        <div class="blackHor"></div>
+                    </div>
+                </div>
+
+                <div class="slide2">
+                    <img src="./assets/slide2.png" alt="">
+                </div>
             </div>
-    
-            <div class='hor'>
-                <img src="./assets/horiz.png">
-            </div>
+            
     
             <div class='right'>
                 <img src="./assets/right.png">
             </div>
     
         </main>
+
+        
     
-        <footer>
+        <footer id="services">
             <div class='footerInfo'>
-                <h2>Our Services</h2>
+                <h2 >Our Services</h2>
                 <p class='footp1'>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor </p><p class='footp2'>ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
     
@@ -109,7 +131,7 @@
         </footer>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfol">
         <header>
             <h1>
                 Portfolio
@@ -118,7 +140,7 @@
                 Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
             </p>
             <ul class="nav">
-                <li>All</li>
+                <li class="navActive">All</li>
                 <li>Web Design</li>
                 <li>Graphic Design</li>
                 <li>Artwork</li>
@@ -126,21 +148,21 @@
         </header>
         <main>
             <div class="content">
-                <div class="img"><img src="./assets/singolo2/img1.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img2.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img3.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img4.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img5.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img6.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img7.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img8.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img9.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img10.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img11.png" alt=""></div>
-                <div class="img"><img src="./assets/singolo2/img12.png" alt=""></div>
+                <div class="img web"><img src="./assets/singolo2/img1.png" alt=""></div>
+                <div class="img art"><img src="./assets/singolo2/img2.png" alt=""></div>
+                <div class="img design"><img src="./assets/singolo2/img3.png" alt=""></div>
+                <div class="img web"><img src="./assets/singolo2/img4.png" alt=""></div>
+                <div class="img art"><img src="./assets/singolo2/img5.png" alt=""></div>
+                <div class="img design"><img src="./assets/singolo2/img6.png" alt=""></div>
+                <div class="img design "><img src="./assets/singolo2/img7.png" alt=""></div>
+                <div class="img design"><img src="./assets/singolo2/img8.png" alt=""></div>
+                <div class="img art"><img src="./assets/singolo2/img9.png" alt=""></div>
+                <div class="img web"><img src="./assets/singolo2/img10.png" alt=""></div>
+                <div class="img art"><img src="./assets/singolo2/img11.png" alt=""></div>
+                <div class="img web"><img src="./assets/singolo2/img12.png" alt=""></div>
             </div>
         </main>
-        <footer>
+        <footer id="about">
             <h2>
                 About Us
             </h2>
@@ -208,7 +230,7 @@
         </footer>
     </section>
 
-    <section class="getQuote">
+    <section class="getQuote" id="cont">
         <div class="info">
             <h1>Get a Quote</h1>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -267,5 +289,9 @@
             
         </footer>
     </section>
+
+    <a class="back_to_top" title="Наверх">ˆ</a>
+
+    <script src="./script.js"> </script>
 </body>
 </html>
