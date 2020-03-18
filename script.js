@@ -227,7 +227,10 @@ window.addEventListener('click', e =>{
   if (e.target == ok){
     e.preventDefault();
     modal.style.opacity = '0';
-    setTimeout(()=>{modal.style.visibility = 'hidden'},1000)
+    setTimeout(()=>{modal.style.visibility = 'hidden'},1000);
+    subject.value = '';
+    description.value = '';
+
   }
 });
 
