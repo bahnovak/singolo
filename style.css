@@ -4,7 +4,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 95px;
 }
+
 
 /*SINGOLO*/
 .singolo {
@@ -24,6 +26,17 @@ body {
     cursor: pointer;
     align-items: flex-end;
     padding-bottom: 33px;
+    position: fixed;
+    z-index: 999999999999;
+    margin-top: -95px;
+}
+
+.singolo .burger{
+    display: none;
+}
+
+.singolo .burgerLi{
+    display: none;
 }
 
 .singolo h1{
@@ -220,7 +233,7 @@ body {
     color: rgb(125, 130, 153);
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 62px;
+    padding-bottom: 28px;
 }
 
 .singolo h2{
@@ -255,14 +268,17 @@ body {
 
 .singolo .advantages span{
     display: flex;
-    width: 299px;
+    width: 293px;
     flex-wrap: nowrap;
     margin-right:20px;
+    margin-bottom: 34px;
 }
-.singolo .line1, .line2{
+
+.singolo .advantages{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
+
 
 .singolo h3{
     font-size: 1.1em;
@@ -278,9 +294,7 @@ body {
     letter-spacing: 0.027em;
 }
 
-.singolo .line2{
-    margin-top: 34px;
-}
+
 
 /*PORTFOLIO*/
 
@@ -715,43 +729,20 @@ body {
     cursor: pointer;
 }
 
-/* up button*/
-
-.back_to_top {
-    position: fixed;
-    bottom: 80px;
-    right: 40px;
-    z-index: 9999;
-    text-align: center;
-    line-height: 30px;
-    color: #444;
-    cursor: pointer;
-    border-radius: 2px;
-    display: none;
-    font-size: 6em;
-    text-decoration: none;
-  }
-  
-  .back_to_top:hover {
-    color: black;
-  }
-  
-  .back_to_top-show {
-    display: block;
-  }
 
 .modal{
     transition: opacity 1s;
-    z-index: 99999;
+    z-index: 9999999999999999999999999999999999999;
     position: fixed;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: rgba(10, 10, 10, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
     visibility: hidden;
     opacity: 0;
+    margin-top: -95px;
 
 }
 
@@ -798,4 +789,348 @@ body {
     margin-bottom: 10px;
     color: rgb(250, 250, 162);
     font-weight: 700;
+}
+
+@media screen and (min-width: 376px) and (max-width:769px){
+    .singolo header{
+        width: 689px;
+    }
+
+    .singolo main{
+        padding: 0;
+        width: 768px;
+        height: 442px;
+    }
+    
+    .sliderContain{
+     margin-left: 85px;
+     width: 600px;
+    }
+    
+    .slide1{
+        margin: 0;
+        width: 600px;
+    }
+
+    .slide2{
+        margin-left: 40px;
+        width: 600px;
+    }
+
+    .singolo main .vert img{
+        width: 100%;
+    }
+    .singolo main .vert{
+        width: 163px;
+        margin-right: 40px;
+        margin-left: 30px;
+    }
+
+    .singolo main .hor img{
+        width: 100%;
+    }
+    .singolo main .hor{
+        width: 345px;
+        margin-right:0px;
+    }
+
+    .singolo .right{
+        margin-left: 720px;
+    }
+
+    .singolo .left{
+        margin-left: 30px;
+    }
+
+    .singolo .slide2 img{
+        height: 345px;
+    }
+
+    .blackVert{
+        margin-left: 9px;
+        margin-top: 44px;
+        width:128.5px;
+        height: 227px;
+    }
+
+    .blackHor{
+        height: 135px;
+        width: 238.5px;
+        margin-left: 42px;
+        margin-top: 10px;
+    }
+
+    .singolo footer{
+        width: 689px;
+    }
+
+    .singolo .advantages{
+        justify-content: space-between;
+    }
+    
+    .portfolio header{
+        width: 689px;
+
+    }
+
+    .portfolio main{
+        width: 689px;
+    }
+
+    .portfolio footer{
+        width: 689px;
+    }
+    .portfolio .content{
+        overflow: visible;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .portfolio .reviewsDiv{
+        width: 217px;
+    }
+
+    .portfolio .photo img{
+        width: 217px;
+    }
+
+    .getQuote .info{
+        width: 689px;
+    }
+
+    .getQuote .contain{
+        width: 689px;
+    }
+    .getQuote footer{
+        width: 689px;
+    }
+
+    .getQuote input{
+        width: 442px;
+    }
+    .getQuote textarea{
+        width: 442px;
+    }
+
+    .getQuote button{
+        width: 442px;
+    }
+
+    .getQuote .contact{
+        margin-left: 0;
+    }
+
+    .getQuote .copy{
+        display: none;
+    }
+
+    .getQuote footer{
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-width: 375px){
+    body{
+        margin-top: 92px;
+    }
+    .singolo header{
+        width: 315px;
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        margin-top: -92px;
+    }
+
+    .singolo .burger{
+        display: block;
+        position: absolute;
+        left:0;
+        margin-left: 20px;
+    }
+
+    .singolo .burgerLi{
+        display: block;
+        position: absolute;
+    }
+    .singolo .menu{
+        transition: transform 0.5s;
+        position: fixed;
+        flex-wrap: wrap;
+        background-color: rgb(45, 48, 58);
+        z-index: 99999999;
+        top: 0;
+        width: 278px;
+        margin-left: -50px;
+        height: 100vh;
+        padding-top: 232px;
+        align-content: flex-start;
+        transform: translateX(-100%);
+        
+    }
+
+    .burgerLi{
+        margin-top: -202px;
+        margin-left: 25px;
+    }
+    .imgBurger{
+        transform: rotate(90deg);
+    }
+
+    .imgLogo{
+        margin-left: 30px;
+    }
+
+    .singolo .menu .mob{
+        padding-left: 20px;
+        font-size: 1.8em;
+        margin-left: 51px;
+        margin-bottom: 30px;
+    }
+    .singolo .dt::after{
+        content: '';
+    }
+
+    body .parang{
+
+        width: 375px;
+        height: 100%;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        visibility: hidden;
+    }
+
+    .vert img{
+        width: 80px;
+    }
+
+    .hor img{
+        height: 80px;
+    }
+
+    .slide2 img{
+        height: 190px;
+    }
+
+    .singolo main .slide1{
+        margin-left: 35px;
+    }
+    .singolo main .slide2{
+        margin-left: 52px;
+    }
+
+    .singolo main .slide1 .vert{
+        margin-right: 10px;
+    }
+
+    .singolo main .sliderContain {
+        margin-left: 0;
+    }
+
+    .singolo main .left{
+        margin-left: -20px ;
+    }
+
+    .singolo main .right{
+        margin-left: 315px ;
+    }
+
+    .singolo main{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .singolo footer{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .portfolio header{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .portfolio main{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .portfolio main .content .img{
+        width: 150px;
+        height: 128px;
+        margin: 0 0 10px;
+    }
+
+    .portfolio main .content{
+        overflow: visible;
+        height: 100%;
+    }
+    .portfolio main img{
+        width: 100%;
+    }
+
+    .portfolio footer{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .portfolio .reviews{
+        flex-wrap: wrap;
+    }
+
+    .portfolio .reviewsDiv{
+        margin-bottom: 30px;
+    }
+
+
+    .getQuote .info{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .getQuote .contain{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .getQuote footer{
+        width: 315px;
+        padding: 30px;
+    }
+
+    .getQuote input{
+        width: 315px;
+    }
+
+    .getQuote textarea{
+        width: 315px;
+    }
+
+    .getQuote button{
+        width: 315px;
+    }
+
+    .getQuote .form{
+        width: 315px;
+    }
+
+    .getQuote .contain{
+        flex-wrap: wrap;
+    }
+
+    .getQuote .contact{
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    .getQuote .copy{
+        display: none;
+    }
+
+    .getQuote footer{
+        justify-content: center;
+    }
+
 }

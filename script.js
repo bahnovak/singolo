@@ -1,55 +1,68 @@
-// up button
 
-(function() {
-    'use strict';
-  
-    function trackScroll() {
-      let scrolled = window.pageYOffset;
-      let coords = document.documentElement.clientHeight;
-  
-      if (scrolled > coords) {
-        goTopBtn.classList.add('back_to_top-show');
-      }
-      if (scrolled < coords) {
-        goTopBtn.classList.remove('back_to_top-show');
-      }
-    }
-  
-    function backToTop() {
-      if (window.pageYOffset > 0) {
-        window.scrollBy(0, -80);
-        setTimeout(backToTop, 0);
-      }
-    }
-  
-    let goTopBtn = document.querySelector('.back_to_top');
-  
-    window.addEventListener('scroll', trackScroll);
-    goTopBtn.addEventListener('click', backToTop);
-  })();
 
 // menu
+let liScroll =document.querySelectorAll('.singolo li');
 
-(function(){
     window.addEventListener('click',(element)=>{
-    let a = document.querySelectorAll('.singolo .menu a'),
-        li=document.querySelectorAll('.singolo li')
+    let a = document.querySelectorAll('.singolo .menu a');
         el = element.target;
       a.forEach((e,i) => {
         if(el == e){
-            li.forEach((element) => {
+            liScroll.forEach((element) => {
                 if( element.classList.contains('activeMenu')){
                     element.classList.remove('activeMenu')
                 }
             });
 
-            li[i].classList.add('activeMenu');
+            liScroll[i].classList.add('activeMenu');
 
         }
       });
   })
-})()
 
+
+window.addEventListener('scroll', ()=>{
+
+  liScroll.forEach(element => {
+    if(element.classList.contains('activeMenu')){
+      element.classList.remove('activeMenu');
+    }
+    
+  });
+
+  if (pageYOffset >= 0 && pageYOffset <= 600){
+    liScroll.forEach(element => {
+      element.classList.remove('activeMenu')
+    });
+    liScroll[0].classList.add('activeMenu');
+  } 
+  if (pageYOffset >= 601 && pageYOffset <= 1100){
+    liScroll.forEach(element => {
+      element.classList.remove('activeMenu')
+    });
+    liScroll[1].classList.add('activeMenu');
+  }
+
+  if (pageYOffset >= 1101 && pageYOffset <= 1970){
+    liScroll.forEach(element => {
+      element.classList.remove('activeMenu')
+    });
+    liScroll[2].classList.add('activeMenu');
+  }
+
+  if (pageYOffset >= 1971 && pageYOffset <= 2696){
+    liScroll.forEach(element => {
+      element.classList.remove('activeMenu')
+    });
+    liScroll[3].classList.add('activeMenu');
+  }
+  if (pageYOffset >= 2697 ){
+    liScroll.forEach(element => {
+      element.classList.remove('activeMenu')
+    });
+    liScroll[4].classList.add('activeMenu');
+  }
+});
 // slider
 
 
@@ -204,7 +217,6 @@ let submit = document.querySelector('button[type="submit"]'),
     modalSubject = document.querySelector('.subject'),
     modalDescription = document.querySelector('.description');
 
-   console.log(subject,modalSubject)
 window.addEventListener('click', e =>{
   if (e.target == submit){
     e.preventDefault();
@@ -237,6 +249,44 @@ if(!subject.value){
 if(!description.value ){
   modalDescription.innerHTML = 'Без описания'
 }
+
+//mobile
+
+if(window.matchMedia('(max-width: 376px)').matches){
+  let burger = document.querySelector('.burger img'),
+    menu = document.querySelector('.menu'),
+    imgBurger = document.querySelector('.imgBurger'),
+    mobLi = document.querySelectorAll('.mob a'),
+    body = document.querySelector('body'),
+    parang = document.querySelector('.parang');
+
+
+window.addEventListener('click',(e)=>{
+  let a = e.target;
+
+  if(e.target == burger){
+    parang.style.visibility = 'visible'
+    menu.style.transform = 'translateX(0)';
+
+  }
+
+  if(e.target == imgBurger ){
+    parang.style.visibility = 'hidden'
+    menu.style.transform = 'translateX(-100%)'
+  }
+
+  mobLi.forEach(element => {
+    if(a == element){
+      parang.style.visibility = 'hidden'
+      menu.style.transform = 'translateX(-100%)'
+    }
+  });
+});
+}
+
+
+
+
   
     
   

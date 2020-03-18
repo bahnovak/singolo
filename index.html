@@ -8,25 +8,28 @@
     <title>Singolo</title>
 </head>
 <body>
-    <div class="modal">
-        <div class="message">
-            <h2>Письмо отправлено</h2>
-            <p>Тема : <span class="subject"></span></p><br>
-            <p>Описание : <span class="description"></span></p><br>
-            <input type="button" class="ok" value="ОК">
-        </div>
-        
-    </div>
+    <div class="parang"></div>
     <section class="singolo" id="home">
         <header>
+            <div class="burger">
+                <img src="./assets/mobile/Burger-menu-icon.png" alt="">
+            </div>
             <h1>SINGOLO</h1>
+
+
             <ul class="menu">
-                <li class='dt'><a href="#home">HOME</a></li>
-                <li class='dt'><a href="#services">SERVICES</a></li>
-                <li class='dt'><a href="#portfol">PORTFOLIO</a></li>
-                <li class='dt'><a href="#about">ABOUT</a></li>
-                <li><a href="#cont">CONTACT</a></li>
+                
+                <li class='dt mob'><a href="#home">HOME</a></li>
+                <li class='dt mob'><a href="#services">SERVICES</a></li>
+                <li class='dt mob'><a href="#portfol">PORTFOLIO</a></li>
+                <li class='dt mob'><a href="#about">ABOUT</a></li>
+                <li class="mob"><a href="#cont">CONTACT</a></li>
+                <div class="burgerLi">
+                    <img class="imgBurger" src="./assets/mobile/Burger-menu-icon.png" alt="">
+                    <img class="imgLogo" src="./assets/mobile/logo.png" alt="">
+                </div>
             </ul>
+            
         </header>
         
         <main >
@@ -68,7 +71,7 @@
             </div>
     
             <div class='advantages'>
-                <div class="line1">
+                
                     <span>
                         <div class="footImg"><img src="./assets/pen.png"></div>
                         <div class="footAdv">
@@ -96,8 +99,8 @@
                             </p>
                         </div>
                     </span>
-                </div>
-                <div class="line2">
+                
+                
                     <span>
                         <div class="footImg"><img src="./assets/phone.png"></div>
                         <div class="footAdv">
@@ -125,7 +128,7 @@
                             </p>
                         </div>
                     </span>
-                </div>
+                
                 
             </div>
         </footer>
@@ -289,9 +292,15 @@
             
         </footer>
     </section>
-
-    <a class="back_to_top" title="Наверх">ˆ</a>
-
+    <div class="modal">
+        <div class="message">
+            <h2>Письмо отправлено</h2>
+            <p>Тема : <span class="subject"></span></p><br>
+            <p>Описание : <span class="description"></span></p><br>
+            <input type="button" class="ok" value="ОК">
+        </div>
+        
+    </div>
     <script src="./script.js"> </script>
 </body>
 </html>
