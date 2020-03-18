@@ -4,19 +4,128 @@
 let liScroll =document.querySelectorAll('.singolo li');
 
     window.addEventListener('click',(element)=>{
-    let a = document.querySelectorAll('.singolo .menu a');
-        el = element.target;
-      a.forEach((e,i) => {
+      let el = element.target;
+      liScroll.forEach((e,i) => {
         if(el == e){
-            liScroll.forEach((element) => {
-                if( element.classList.contains('activeMenu')){
-                    element.classList.remove('activeMenu')
-                }
-            });
+          liScroll.forEach(element => {
+              element.classList.remove('activeMenu')
+          });
+          
+          liScroll[i].classList.add('activeMenu');
+          if(window.matchMedia('(min-width: 769px)').matches){
+              if (el == liScroll[0]){
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+            }
 
-            liScroll[i].classList.add('activeMenu');
+            if (el == liScroll[1]){
+              window.scroll({
+                top: 601,
+                behavior: "smooth"
+            })
+            }
 
+            if (el == liScroll[2]){
+              window.scroll({
+                top: 1101,
+                behavior: "smooth"
+            })
+            }
+
+            if (el == liScroll[3]){
+              window.scroll({
+                top: 1971,
+                behavior: "smooth"
+            })
+            }
+
+            if (el == liScroll[4]){
+              window.scroll({
+                top: 2704,
+                behavior: "smooth"
+            })
+            }
+          }
+
+          if(window.matchMedia('(max-width: 768px) and (min-width: 376px)').matches){
+            if (el == liScroll[0]){
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth"
+          })
+          }
+        
+          if (el == liScroll[1]){
+            window.scroll({
+              top: 448,
+              behavior: "smooth"
+          })
+          }
+        
+          if (el == liScroll[2]){
+            window.scroll({
+              top: 1131,
+              behavior: "smooth"
+          })
+          }
+        
+          if (el == liScroll[3]){
+            window.scroll({
+              top: 2218,
+              behavior: "smooth"
+          })
+          }
+        
+          if (el == liScroll[4]){
+            window.scroll({
+              top: 2921,
+              behavior: "smooth"
+          })
+          }
         }
+
+        if(window.matchMedia('(max-width: 375px)').matches){
+          if (el == liScroll[0]){
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+        }
+      
+        if (el == liScroll[1]){
+          window.scroll({
+            top: 257,
+            behavior: "smooth"
+        })
+        }
+      
+        if (el == liScroll[2]){
+          window.scroll({
+            top: 1400,
+            behavior: "smooth"
+        })
+        }
+      
+        if (el == liScroll[3]){
+          window.scroll({
+            top: 2575,
+            behavior: "smooth"
+        })
+        }
+      
+        if (el == liScroll[4]){
+          window.scroll({
+            top: 4402,
+            behavior: "smooth"
+        })
+        }
+      }
+
+          
+        }
+        
       });
   })
 
@@ -29,39 +138,111 @@ window.addEventListener('scroll', ()=>{
     }
     
   });
+  if(window.matchMedia('(min-width: 769px)').matches){
+        if (pageYOffset >= 0 && pageYOffset <= 600){
+        liScroll.forEach(element => {
+          element.classList.remove('activeMenu')
+        });
+        liScroll[0].classList.add('activeMenu');
+      } 
+      if (pageYOffset >= 601 && pageYOffset <= 1100){
+        liScroll.forEach(element => {
+          element.classList.remove('activeMenu')
+        });
+        liScroll[1].classList.add('activeMenu');
+      }
+    
+      if (pageYOffset >= 1101 && pageYOffset <= 1970){
+        liScroll.forEach(element => {
+          element.classList.remove('activeMenu')
+        });
+        liScroll[2].classList.add('activeMenu');
+      }
+    
+      if (pageYOffset >= 1971 && pageYOffset <= 2696){
+        liScroll.forEach(element => {
+          element.classList.remove('activeMenu')
+        });
+        liScroll[3].classList.add('activeMenu');
+      }
+      if (pageYOffset >= 2697 ){
+        liScroll.forEach(element => {
+          element.classList.remove('activeMenu')
+        });
+        liScroll[4].classList.add('activeMenu');
+      }
+  }
 
-  if (pageYOffset >= 0 && pageYOffset <= 600){
+  if(window.matchMedia('(max-width: 768px) and (min-width: 376px)').matches){
+    if (pageYOffset >= 0 && pageYOffset < 448){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
     });
     liScroll[0].classList.add('activeMenu');
   } 
-  if (pageYOffset >= 601 && pageYOffset <= 1100){
+  if (pageYOffset >= 448 && pageYOffset < 1131){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
     });
     liScroll[1].classList.add('activeMenu');
   }
 
-  if (pageYOffset >= 1101 && pageYOffset <= 1970){
+  if (pageYOffset >= 1131 && pageYOffset < 2218){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
     });
     liScroll[2].classList.add('activeMenu');
   }
 
-  if (pageYOffset >= 1971 && pageYOffset <= 2696){
+  if (pageYOffset >= 2218 && pageYOffset < 2921){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
     });
     liScroll[3].classList.add('activeMenu');
   }
-  if (pageYOffset >= 2697 ){
+  if (pageYOffset >= 2921 ){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
     });
     liScroll[4].classList.add('activeMenu');
   }
+}
+
+if(window.matchMedia('(max-width: 375px)').matches){
+  if (pageYOffset >= 0 && pageYOffset < 257){
+  liScroll.forEach(element => {
+    element.classList.remove('activeMenu')
+  });
+  liScroll[0].classList.add('activeMenu');
+} 
+if (pageYOffset >= 257 && pageYOffset < 1400){
+  liScroll.forEach(element => {
+    element.classList.remove('activeMenu')
+  });
+  liScroll[1].classList.add('activeMenu');
+}
+
+if (pageYOffset >= 1400 && pageYOffset < 2575){
+  liScroll.forEach(element => {
+    element.classList.remove('activeMenu')
+  });
+  liScroll[2].classList.add('activeMenu');
+}
+
+if (pageYOffset >= 2575 && pageYOffset < 4402){
+  liScroll.forEach(element => {
+    element.classList.remove('activeMenu')
+  });
+  liScroll[3].classList.add('activeMenu');
+}
+if (pageYOffset >= 4402 ){
+  liScroll.forEach(element => {
+    element.classList.remove('activeMenu')
+  });
+  liScroll[4].classList.add('activeMenu');
+}
+}
+  
 });
 // slider
 
