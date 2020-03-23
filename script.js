@@ -12,7 +12,7 @@ let liScroll =document.querySelectorAll('.singolo li');
           });
           
           liScroll[i].classList.add('activeMenu');
-          if(window.matchMedia('(min-width: 769px)').matches){
+          if(window.matchMedia('(min-width: 1020px)').matches){
               if (el == liScroll[0]){
               window.scrollTo({
                 top: 0,
@@ -49,7 +49,7 @@ let liScroll =document.querySelectorAll('.singolo li');
             }
           }
 
-          if(window.matchMedia('(max-width: 768px) and (min-width: 376px)').matches){
+          if(window.matchMedia('(min-width: 768px) and (max-width:1019px)').matches){
             if (el == liScroll[0]){
             window.scrollTo({
               top: 0,
@@ -86,7 +86,7 @@ let liScroll =document.querySelectorAll('.singolo li');
           }
         }
 
-        if(window.matchMedia('(max-width: 375px)').matches){
+        if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
           if (el == liScroll[0]){
           window.scrollTo({
             top: 0,
@@ -103,21 +103,21 @@ let liScroll =document.querySelectorAll('.singolo li');
       
         if (el == liScroll[2]){
           window.scroll({
-            top: 1400,
+            top: 1358,
             behavior: "smooth"
         })
         }
       
         if (el == liScroll[3]){
           window.scroll({
-            top: 2575,
+            top: 2483,
             behavior: "smooth"
         })
         }
       
         if (el == liScroll[4]){
           window.scroll({
-            top: 4402,
+            top: 4310,
             behavior: "smooth"
         })
         }
@@ -138,7 +138,7 @@ window.addEventListener('scroll', ()=>{
     }
     
   });
-  if(window.matchMedia('(min-width: 769px)').matches){
+  if(window.matchMedia('(min-width: 1020px)').matches){
         if (pageYOffset >= 0 && pageYOffset <= 600){
         liScroll.forEach(element => {
           element.classList.remove('activeMenu')
@@ -173,7 +173,7 @@ window.addEventListener('scroll', ()=>{
       }
   }
 
-  if(window.matchMedia('(max-width: 768px) and (min-width: 376px)').matches){
+  if(window.matchMedia('(min-width: 768px) and (max-width:1019px)').matches){
     if (pageYOffset >= 0 && pageYOffset < 448){
     liScroll.forEach(element => {
       element.classList.remove('activeMenu')
@@ -208,34 +208,34 @@ window.addEventListener('scroll', ()=>{
   }
 }
 
-if(window.matchMedia('(max-width: 375px)').matches){
+if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
   if (pageYOffset >= 0 && pageYOffset < 257){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
   });
   liScroll[0].classList.add('activeMenu');
 } 
-if (pageYOffset >= 257 && pageYOffset < 1400){
+if (pageYOffset >= 257 && pageYOffset < 1358){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
   });
   liScroll[1].classList.add('activeMenu');
 }
 
-if (pageYOffset >= 1400 && pageYOffset < 2575){
+if (pageYOffset >= 1358 && pageYOffset < 2483){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
   });
   liScroll[2].classList.add('activeMenu');
 }
 
-if (pageYOffset >= 2575 && pageYOffset < 4402){
+if (pageYOffset >= 2483 && pageYOffset < 4310){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
   });
   liScroll[3].classList.add('activeMenu');
 }
-if (pageYOffset >= 4402 ){
+if (pageYOffset >= 4310 ){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
   });
@@ -436,11 +436,11 @@ if(!description.value ){
 
 //mobile
 
-if(window.matchMedia('(max-width: 376px)').matches){
+if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
   let burger = document.querySelector('.burger img'),
     menu = document.querySelector('.menu'),
     imgBurger = document.querySelector('.imgBurger'),
-    mobLi = document.querySelectorAll('.mob a'),
+    mobLi = document.querySelectorAll('.menu li'),
     body = document.querySelector('body'),
     parang = document.querySelector('.parang');
 
@@ -449,20 +449,23 @@ window.addEventListener('click',(e)=>{
   let a = e.target;
 
   if(e.target == burger){
-    parang.style.visibility = 'visible'
-    menu.style.transform = 'translateX(0)';
+    parang.style.visibility = 'visible';
+    menu.style.visibility = 'visible';
+    menu.style.opacity = '100';
 
   }
 
   if(e.target == imgBurger ){
-    parang.style.visibility = 'hidden'
-    menu.style.transform = 'translateX(-100%)'
+    parang.style.visibility = 'hidden';
+    menu.style.opacity = '0';
+    setTimeout(()=>{ menu.style.visibility = 'hidden' },1000);
   }
 
   mobLi.forEach(element => {
     if(a == element){
-      parang.style.visibility = 'hidden'
-      menu.style.transform = 'translateX(-100%)'
+      parang.style.visibility = 'hidden';
+      menu.style.opacity = '0';
+      setTimeout(()=>{ menu.style.visibility = 'hidden' },1000);
     }
   });
 });

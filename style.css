@@ -791,7 +791,7 @@ body {
     font-weight: 700;
 }
 
-@media screen and (min-width: 376px) and (max-width:769px){
+@media screen and (min-width: 768px) and (max-width:1019px){
     .singolo header{
         width: 689px;
     }
@@ -930,10 +930,15 @@ body {
 
 }
 
-@media screen and (max-width: 375px){
+@media screen and (min-width: 0) and (max-width: 767px){
     body{
+        width: 375px;
         margin-top: 92px;
+        margin-left: auto;
+        margin-right: auto;
+       
     }
+    
     .singolo header{
         width: 315px;
         padding: 30px;
@@ -954,19 +959,34 @@ body {
         position: absolute;
     }
     .singolo .menu{
-        transition: transform 0.5s;
+        transition: transform 0s, opacity 1s;
         position: fixed;
         flex-wrap: wrap;
         background-color: rgb(45, 48, 58);
-        z-index: 99999999;
+        z-index: 99998;
         top: 0;
         width: 278px;
         margin-left: -50px;
         height: 100vh;
         padding-top: 232px;
         align-content: flex-start;
-        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
         
+    }
+
+    .blackVert{
+        margin-left: 4px;
+        margin-top: 21px;
+        width:64px;
+        height: 112px;
+    }
+
+    .blackHor{
+        height: 63px;
+        width: 111px;
+        margin-left: 20px;
+        margin-top: 4px;
     }
 
     .burgerLi{
