@@ -86,7 +86,7 @@ let liScroll =document.querySelectorAll('.singolo li');
           }
         }
 
-        if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
+        if(window.matchMedia('(min-width: 0) and (max-width: 767px)').matches){
           if (el == liScroll[0]){
           window.scrollTo({
             top: 0,
@@ -208,7 +208,7 @@ window.addEventListener('scroll', ()=>{
   }
 }
 
-if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
+if(window.matchMedia('(min-width: 0) and (max-width: 767px)').matches){
   if (pageYOffset >= 0 && pageYOffset < 257){
   liScroll.forEach(element => {
     element.classList.remove('activeMenu')
@@ -436,19 +436,20 @@ if(!description.value ){
 
 //mobile
 
-if(window.matchMedia('(min-width: 375px) and (max-width: 767px)').matches){
+if(window.matchMedia('(min-width: 0) and (max-width: 767px)').matches){
   let burger = document.querySelector('.burger img'),
     menu = document.querySelector('.menu'),
     imgBurger = document.querySelector('.imgBurger'),
     mobLi = document.querySelectorAll('.menu li'),
-    body = document.querySelector('body'),
     parang = document.querySelector('.parang');
 
 
-window.addEventListener('click',(e)=>{
+document.addEventListener('click',(e)=>{
+  document.addEventListener('mousedow',(e)=>{e.preventDefault();});
   let a = e.target;
 
   if(e.target == burger){
+    e.preventDefault();
     parang.style.visibility = 'visible';
     menu.style.visibility = 'visible';
     menu.style.opacity = '100';
@@ -456,6 +457,7 @@ window.addEventListener('click',(e)=>{
   }
 
   if(e.target == imgBurger ){
+    e.preventDefault();
     parang.style.visibility = 'hidden';
     menu.style.opacity = '0';
     setTimeout(()=>{ menu.style.visibility = 'hidden' },1000);
@@ -463,6 +465,7 @@ window.addEventListener('click',(e)=>{
 
   mobLi.forEach(element => {
     if(a == element){
+      e.preventDefault();
       parang.style.visibility = 'hidden';
       menu.style.opacity = '0';
       setTimeout(()=>{ menu.style.visibility = 'hidden' },1000);
